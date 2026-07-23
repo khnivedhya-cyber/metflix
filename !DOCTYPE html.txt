@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOVEFLIX</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <h1 class="logo">LOVEFLIX</h1>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#episodes">Episodes</a>
+        <a href="#">Gallery</a>
+        <a href="#">Letters</a>
+    </nav>
+</header>
+
+<section class="hero">
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+        <h2>I NEVER LOOK AWAY</h2>
+
+        <p>
+            Our story isn't finished.
+            It's still streaming...
+        </p>
+
+        <h3>❤️ Together since 28/08/2025 ❤️</h3>
+
+        <div class="buttons">
+            <button class="play">▶ Play</button>
+            <button class="info">More Info</button>
+        </div>
+    </div>
+
+</section>
+
+<section id="episodes">
+
+    <h2>Episodes</h2>
+
+    <div class="episode-container">
+
+        <div class="episode">
+            <img src="images/ep1.jpg" alt="">
+            <h3>Episode 1</h3>
+            <p>The Day We Met</p>
+        </div>
+
+        <div class="episode">
+            <img src="images/ep2.jpg" alt="">
+            <h3>Episode 2</h3>
+            <p>Becoming Us</p>
+        </div>
+
+        <div class="episode">
+            <img src="images/ep3.jpg" alt="">
+            <h3>Episode 3</h3>
+            <p>Our Favorite Memories</p>
+        </div>
+
+        <div class="episode">
+            <img src="images/ep4.jpg" alt="">
+            <h3>Episode 4</h3>
+            <p>To Be Continued...</p>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    <p>Made with ❤️ by Nivedhya</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

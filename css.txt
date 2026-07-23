@@ -1,0 +1,224 @@
+{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#141414;
+    color:white;
+    font-family:'Poppins',sans-serif;
+}
+
+/* Header */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:20px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+    transition:.3s;
+}
+
+header.scrolled{
+    background:#111;
+}
+
+.logo{
+    color:#E50914;
+    font-family:'Bebas Neue',sans-serif;
+    font-size:3rem;
+    letter-spacing:2px;
+}
+
+nav{
+    display:flex;
+    gap:30px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#E50914;
+}
+
+/* Hero */
+
+.hero{
+    height:100vh;
+    background:url("images/background.jpg") center/cover no-repeat;
+    position:relative;
+    display:flex;
+    align-items:center;
+    padding:80px;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        to right,
+        rgba(0,0,0,.85),
+        rgba(0,0,0,.35)
+    );
+}
+
+.hero-content{
+    position:relative;
+    max-width:650px;
+    z-index:10;
+}
+
+.hero h2{
+    font-size:5rem;
+    font-family:'Bebas Neue',sans-serif;
+    letter-spacing:3px;
+}
+
+.hero p{
+    margin:20px 0;
+    line-height:1.7;
+}
+
+.hero h3{
+    color:#ffb3b3;
+    margin-bottom:30px;
+}
+
+.buttons{
+    display:flex;
+    gap:15px;
+}
+
+button{
+    padding:14px 30px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:1rem;
+    transition:.3s;
+}
+
+.play{
+    background:white;
+    color:black;
+}
+
+.play:hover{
+    transform:scale(1.05);
+}
+
+.info{
+    background:rgba(109,109,110,.7);
+    color:white;
+}
+
+.info:hover{
+    background:rgba(109,109,110,1);
+}
+
+/* Episodes */
+
+#episodes{
+    padding:80px 60px;
+}
+
+#episodes h2{
+    margin-bottom:30px;
+    font-size:2rem;
+}
+
+.episode-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.episode{
+    background:#1f1f1f;
+    border-radius:10px;
+    overflow:hidden;
+    cursor:pointer;
+
+    opacity:0;
+    transform:translateY(40px);
+
+    transition:.5s;
+}
+
+.episode.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.episode:hover{
+    transform:scale(1.05);
+}
+
+.episode img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+}
+
+.episode h3{
+    padding:15px 15px 5px;
+}
+
+.episode p{
+    padding:0 15px 20px;
+    color:#cfcfcf;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#0d0d0d;
+    color:#888;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+header{
+    padding:20px;
+}
+
+nav{
+    display:none;
+}
+
+.hero{
+    padding:30px;
+}
+
+.hero h2{
+    font-size:3rem;
+}
+
+.buttons{
+    flex-direction:column;
+}
+
+button{
+    width:100%;
+}
+
+#episodes{
+    padding:50px 20px;
+}
+
+}
