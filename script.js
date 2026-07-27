@@ -6,8 +6,12 @@ if(!profile){
 window.location.href="profiles.html";
 
 }
+const welcome = document.getElementById("welcome");
 
-document.getElementById("welcome").innerHTML="Welcome, "+profile+" ❤️";
+if (welcome) {
+    welcome.innerHTML = "Welcome, " + profile + " 💕";
+}
+
 // Play Button
 const playBtn = document.querySelector(".play");
 
