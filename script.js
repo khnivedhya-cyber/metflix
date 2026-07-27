@@ -19,7 +19,7 @@ playBtn.addEventListener("click", () => {
 
     const video = document.getElementById("videoPlayer");
 
-    video.src = "videos/episode1.mp4";
+    video.src = "videos/story.mp4";
 
     video.style.display = "block";
 
