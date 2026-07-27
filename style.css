@@ -36,7 +36,14 @@ header.scrolled{
     color:#E50914;
     font-family:'Bebas Neue',sans-serif;
     font-size:3rem;
-    letter-spacing:2px;
+    letter-spacing:4px;
+    text-shadow:0 0 20px rgba(229,9,20,.45);
+    transition:.3s;
+}
+
+.logo:hover{
+    transform:scale(1.05);
+    text-shadow:0 0 35px rgba(229,9,20,.8);
 }
 
 nav{
