@@ -16,9 +16,19 @@ if (welcome) {
 const playBtn = document.querySelector(".play");
 
 playBtn.addEventListener("click", () => {
-    document.getElementById("episodes").scrollIntoView({
+
+    const video = document.getElementById("videoPlayer");
+
+    video.src = "videos/story.mp4";
+
+    video.style.display = "block";
+
+    video.play();
+
+    video.scrollIntoView({
         behavior: "smooth"
     });
+
 });
 
 // More Info Button
