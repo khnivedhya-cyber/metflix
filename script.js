@@ -13,70 +13,31 @@ if (welcome) {
 }
 
 // Play Button
+
 const playBtn = document.querySelector(".play");
 
 playBtn.addEventListener("click", () => {
+    playEpisode("videos/episode1.mp4");
+});
 
+function playEpisode(videoFile){
+
+    const popup = document.getElementById("videoPopup");
     const video = document.getElementById("videoPlayer");
 
-    video.src = "videos/episode1.mp4";
-
-    video.style.display = "block";
-
-    video.play();
-
-    video.scrollIntoView({
-        behavior: "smooth"
-    });
-
-});
-
-// More Info Button
-const infoBtn = document.querySelector(".info");
-
-infoBtn.addEventListener("click", () => {
-    alert("❤️ Welcome to LOVEFLIX ❤️\n\nEvery episode tells a part of our story.\nThank you for being my favorite person.\n\nLove you forever. 🤍");
-});
-
-// Fade-in Animation
-const episodes = document.querySelectorAll(".episode");
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-        }
-
-    });
-}, {
-    threshold: 0.2
-});
-
-episodes.forEach((episode) => {
-    observer.observe(episode);
-});
-
-// Navbar Background on Scroll
-const header = document.querySelector("header");
-
-window.addEventListener("scroll", () => {
-
-    if (window.scrollY > 50) {
-        header.classList.add("scrolled");
-    } else {
-        header.classList.remove("scrolled");
-    }
-
-});
-function playEpisode(videoFile) {
-
-    const video = document.getElementById("videoPlayer");
-
+    popup.style.display = "flex";
     video.src = videoFile;
-
-    video.style.display = "block";
-
     video.play();
+
+}
+
+function closeVideo(){
+
+    const popup = document.getElementById("videoPopup");
+    const video = document.getElementById("videoPlayer");
+
+    video.pause();
+    video.src = "";
+    popup.style.display = "none";
 
 }
