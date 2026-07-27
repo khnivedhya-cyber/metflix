@@ -27,7 +27,9 @@ header{
 }
 
 header.scrolled{
-    background:#111;
+    background:rgba(20,20,20,.35);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
 }
 
 .logo{
