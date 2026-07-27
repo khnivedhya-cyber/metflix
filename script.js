@@ -19,7 +19,7 @@ playBtn.addEventListener("click", () => {
 
     const video = document.getElementById("videoPlayer");
 
-    video.src = "videos/story.mp4";
+    video.src = "videos/episode1.mp4";
 
     video.style.display = "block";
 
@@ -69,3 +69,14 @@ window.addEventListener("scroll", () => {
     }
 
 });
+function playEpisode(videoFile) {
+
+    const video = document.getElementById("videoPlayer");
+
+    video.src = videoFile;
+
+    video.style.display = "block";
+
+    video.play();
+
+}
