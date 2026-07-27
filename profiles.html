@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Who's Watching?</title>
+
+<style>
+
+body{
+
+margin:0;
+
+background:#141414;
+
+font-family:Arial;
+
+color:white;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+height:100vh;
+
+flex-direction:column;
+
+}
+
+h1{
+
+font-size:3rem;
+
+margin-bottom:50px;
+
+}
+
+.container{
+
+display:flex;
+
+gap:60px;
+
+}
+
+.profile{
+
+cursor:pointer;
+
+text-align:center;
+
+transition:.3s;
+
+}
+
+.profile:hover{
+
+transform:scale(1.08);
+
+}
+
+.profile img{
+
+width:180px;
+
+height:180px;
+
+border-radius:10px;
+
+object-fit:cover;
+
+}
+
+.profile p{
+
+font-size:22px;
+
+margin-top:15px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Who's Watching?</h1>
+
+<div class="container">
+
+<div class="profile" onclick="choose('Black Cat')">
+
+<img src="blackcat.jpg">
+
+<p>Black Cat 🐈‍⬛</p>
+
+</div>
+
+<div class="profile" onclick="choose('Golden Retriever')">
+
+<img src="golden.jpg">
+
+<p>Golden Retriever 🐕</p>
+
+</div>
+
+</div>
+
+<script>
+
+function choose(name){
+
+localStorage.setItem("profile",name);
+
+window.location.href="index.html";
+
+}
+
+</script>
+
+</body>
+
+</html>
