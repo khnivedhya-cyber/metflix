@@ -36,7 +36,7 @@
         <h3>💋Together since 28/08/2025💋 </h3>
 
         <div class="buttons">
-            <button class="play" onclick="playEpisode('videos/story.mp4')">
+            <button class="play" onclick="playEpisode('videos/episode1.mp4')">
 ▶ Play
 </button>
             <button class="info">More Info</button>
@@ -83,8 +83,11 @@
 <footer>
     <p>Made with lovee💕 by Niveuuu💋 </p>
 </footer>
+<div id="videoPopup">
+    <button class="closeBtn" onclick="closeVideo()">✕</button>
 
-<video id="videoPlayer" controls style="display:none; width:80%; max-width:900px;"></video>
+    <video id="videoPlayer" controls></video>
+</div>
 
 <script src="script.js"></script>
 
